@@ -1,0 +1,42 @@
+@import './variables';
+
+.site-nav-item {
+  border: 2px solid transparent;
+  border-radius: $nav-radius;
+  font-family: $font-sans-serif;
+  font-size: $font-size-nav;
+  display: inline-block;
+  margin-left: 1rem;
+  padding: 5px;
+  color: #fff;
+  transition: $trans-link;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.site-nav-item:hover {
+  border-color: white;
+  text-decoration: none;
+  opacity: 1;
+}
+
+// .site-nav-icon {
+//   height: 15px;
+//   margin: -5px 0 0;
+// }
+// .site-nav-button {
+//   display: inline-block;
+//   padding: 5px 10px;
+//   border: #fff 1px solid;
+//   color: #fff;
+//   font-size: 1.3rem;
+//   line-height: 1em;
+//   border-radius: var(--radius);
+//   opacity: 0.7;
+// }
+
+// .site-nav-button:hover {
+//   text-decoration: none;
+// }
