@@ -122,7 +122,6 @@ class LessonBox extends React.Component {
                 <option value={5}>Step 5</option>
                 <option value={6}>Step 6</option>
                 <option value={7}>Step 7</option>
-                <option value={8}>Step 8</option>
             </select>
             <div className="clearfix"></div>
           </div>
