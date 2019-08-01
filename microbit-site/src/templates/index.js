@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 
 import { Layout, PostCard, Pagination } from '../components/common'
 import { MetaData } from '../components/common/meta'
+import styles from '../styles/LessonBox.module.scss'
 
 /**
 * Main index page (home page)
@@ -21,13 +22,10 @@ const Index = ({ data, location, pageContext }) => {
             <MetaData location={location} />
             <Layout isHome={true}>
                 <div className="container">
-                    <section className="post-feed">
-                        {posts.map(({ node }) => (
-                            // The tag below includes the markup for each post - components/common/PostCard.js
-                            <PostCard key={node.id} post={node} />
-                        ))}
-                    </section>
-                    <Pagination pageContext={pageContext} />
+                    <div className={styles.root}>
+                        <h2>Hi!</h2>
+                        <p>Please go to the Lesson page: <a href="/lesson/" title="View the lesson test">Rock Paper Scissors</a></p>
+                    </div>
                 </div>
             </Layout>
         </>
