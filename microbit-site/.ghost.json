@@ -1,0 +1,10 @@
+{
+  "development": {
+    "apiUrl": "https://davesayer.ghost.io",
+    "contentApiKey": "2953444a17363efdea24081879"
+  },
+  "production": {
+    "apiUrl": "https://davesayer.ghost.io",
+    "contentApiKey": "2953444a17363efdea24081879"
+  }
+}

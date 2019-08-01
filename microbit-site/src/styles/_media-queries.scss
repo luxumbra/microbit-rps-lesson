@@ -1,0 +1,34 @@
+$min-lightweight: 'min-width: 320px';
+$min-superstock: 'min-width: 449px';
+$max-superstock: 'max-width: 674px';
+$min-supersport: 'min-width: 675px';
+$max-supersport: 'max-width: 899px';
+$min-superbike: 'min-width: 900px';
+$min-motogp: 'min-width: 1280px';
+
+
+@mixin min-lightweight {
+  @media ($min-lightweight) {
+    @content;
+  }
+}
+@mixin min-superstock {
+  @media ($min-superstock) {
+    @content;
+  }
+}
+@mixin min-supersport {
+  @media ($min-supersport) {
+    @content;
+  }
+}
+@mixin min-superbike {
+  @media ($min-superbike) {
+    @content;
+  }
+}
+@mixin min-motogp {
+  @media ($min-motogp) {
+    @content;
+  }
+}
