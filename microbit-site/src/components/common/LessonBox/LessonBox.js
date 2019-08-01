@@ -21,19 +21,24 @@ class LessonBox extends React.Component {
   nextStep = () => {
     const { currentStep } = this.state
     this.setState({
-      currentStep: currentStep + 1
+      currentStep: +currentStep + 1
     })
   }
 
   prevStep = () => {
     const { currentStep } = this.state
     this.setState({
-      currentStep: currentStep - 1
+      currentStep: +currentStep - 1
     })
   }
 
-  handleChange = option => event => {
-    this.setState({ option : event.target.value })
+  handleChange = (event) => {
+    console.log('Target: ', event.target.value)
+    const selectedStep = event.target.value
+    this.setState({
+      currentStep: +selectedStep
+    })
+    console.log('Current: ', this.state.currentStep);
   }
 
 
@@ -45,9 +50,8 @@ class LessonBox extends React.Component {
       case 1:
         return (
           <div className={cn(styles.step, styles.current, 'js-step')} data-step={currentStep}>
-            {console.log('Hey: ', activity)}
             <h3>Step {`${currentStep}`}</h3>
-            {activity.steps[currentStep].text}
+            <p>{activity.steps[currentStep].text}</p>
             <div className="block_wrapper">{activity.steps[currentStep].javaScriptBlocks}</div>
           </div>
         )
@@ -55,7 +59,7 @@ class LessonBox extends React.Component {
         return (
           <div className={cn(styles.step, styles.current, 'js-step')} data-step={currentStep}>
             <h3>Step {`${currentStep}`}</h3>
-            {activity.steps[currentStep].text}
+            <p>{activity.steps[currentStep].text}</p>
             <div className="block_wrapper">{activity.steps[currentStep].javaScriptBlocks}</div>
           </div>
         )
@@ -63,7 +67,7 @@ class LessonBox extends React.Component {
         return (
           <div className={cn(styles.step, styles.current, 'js-step')} data-step={currentStep}>
             <h3>Step {`${currentStep}`}</h3>
-            {activity.steps[currentStep].text}
+            <p>{activity.steps[currentStep].text}</p>
             <div className="block_wrapper">{activity.steps[currentStep].javaScriptBlocks}</div>
           </div>
         )
@@ -71,7 +75,7 @@ class LessonBox extends React.Component {
         return (
           <div className={cn(styles.step, styles.current, 'js-step')} data-step={currentStep}>
             <h3>Step {`${currentStep}`}</h3>
-            {activity.steps[currentStep].text}
+            <p>{activity.steps[currentStep].text}</p>
             <div className="block_wrapper">{activity.steps[currentStep].javaScriptBlocks}</div>
           </div>
         )
@@ -79,7 +83,7 @@ class LessonBox extends React.Component {
         return (
           <div className={cn(styles.step, styles.current, 'js-step')} data-step={currentStep}>
             <h3>Step {`${currentStep}`}</h3>
-            {activity.steps[currentStep].text}
+            <p>{activity.steps[currentStep].text}</p>
             <div className="block_wrapper">{activity.steps[currentStep].javaScriptBlocks}</div>
           </div>
         )
@@ -87,7 +91,7 @@ class LessonBox extends React.Component {
         return (
           <div className={cn(styles.step, styles.current, 'js-step')} data-step={currentStep}>
             <h3>Step {`${currentStep}`}</h3>
-            {activity.steps[currentStep].text}
+            <p>{activity.steps[currentStep].text}</p>
             <div className="block_wrapper">{activity.steps[currentStep].javaScriptBlocks}</div>
           </div>
         )
@@ -95,7 +99,7 @@ class LessonBox extends React.Component {
         return (
           <div className={cn(styles.step, styles.current, 'js-step')} data-step={currentStep}>
             <h3>Step {`${currentStep}`}</h3>
-            {activity.steps[currentStep].text}
+            <p>{activity.steps[currentStep].text}</p>
             <div className="block_wrapper">{activity.steps[currentStep].javaScriptBlocks}</div>
           </div>
         )
@@ -110,15 +114,15 @@ class LessonBox extends React.Component {
         <div className={cn(styles.ribbon, styles.box)}>
           <div className={`${styles.ribbonHeader}`}>
             <span>8 steps</span>
-            <select className={cn('js-step-selector', styles.lessonStepSelector)} name="step-selector" handleChange={this.handleChange}>
-                <option value="1">Step 1</option>
-                <option value="2">Step 2</option>
-                <option value="3">Step 3</option>
-                <option value="4">Step 4</option>
-                <option value="5">Step 5</option>
-                <option value="6">Step 6</option>
-                <option value="7">Step 7</option>
-                <option value="8">Step 8</option>
+            <select className={cn('js-step-selector', styles.lessonStepSelector)} name="step-selector" onChange={this.handleChange}>
+                <option value={1}>Step 1</option>
+                <option value={2}>Step 2</option>
+                <option value={3}>Step 3</option>
+                <option value={4}>Step 4</option>
+                <option value={5}>Step 5</option>
+                <option value={6}>Step 6</option>
+                <option value={7}>Step 7</option>
+                <option value={8}>Step 8</option>
             </select>
             <div className="clearfix"></div>
           </div>
