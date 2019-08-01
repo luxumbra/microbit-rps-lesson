@@ -49,6 +49,7 @@
     "gatsby-plugin-sharp": "2.2.8",
     "gatsby-source-filesystem": "2.1.5",
     "gatsby-source-ghost": "3.4.4",
+    "gatsby-transformer-json": "^2.2.0",
     "gatsby-transformer-sharp": "2.2.4",
     "lodash": "4.17.15",
     "node-sass": "^4.12.0",

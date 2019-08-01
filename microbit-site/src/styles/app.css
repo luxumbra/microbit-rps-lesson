@@ -312,11 +312,11 @@ html {
     background: var(--color-base);
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-    @include min-superbike {
+    @media (min-width: 768px) {
         font-size: 18px;
     }
 
-    @include min-motogp {
+    @media (min-width: 992px) {
         font-size: 20px;
     }
 }
@@ -336,6 +336,10 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -moz-font-feature-settings: "liga" on;
+}
+body.background-gradient {
+    background-size: 100%;
+    background-image: url(https://microbit.org/images/background.png),linear-gradient(95deg, #00ed00 0%, #32deff 90%);
 }
 
 ::selection {

@@ -1,16 +1,15 @@
-import React from 'react';
+import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
-import { Navigation } from '../Navigation';
+import { Navigation } from '../Navigation'
 //
-import styles from '../../../styles/masthead.module.scss';
+import styles from '../../../styles/Masthead.module.scss'
 
 const Masthead = ({ site, data, logo, logoAlt, children }) => (
   <div className={styles.siteMast}>
     <div className={styles.siteMastLeft}>
         <Link to="/">
-            {console.log(logo)}
             {site.logo ?
                 <img className={styles.siteLogo} src={logo} alt={logoAlt} />
                 : <Img fixed={data.file.childImageSharp.fixed} alt={logoAlt} />
@@ -25,4 +24,4 @@ const Masthead = ({ site, data, logo, logoAlt, children }) => (
   </div>
 )
 
-export default Masthead;
+export default Masthead

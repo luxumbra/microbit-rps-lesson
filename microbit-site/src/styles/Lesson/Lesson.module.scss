@@ -22,11 +22,11 @@
     }
   }
 
-  .lesson_header_description {
+  .lesson-header-description {
     font-size: 1.3rem;
   }
 
-  .lesson_buttons {
+  .lesson-buttons {
     margin: 2.2rem 0 2.2rem 0;
     overflow: hidden;
 
@@ -52,6 +52,20 @@
     .print {
       float: right;
       margin-top: 0;
+    }
+  }
+
+  .lesson-meta {
+    clear: both;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 2.2rem;
+
+    li {
+      font-weight: $font-bold;
+      margin-top: 0;
+      display: inline;
+      margin-right: 3.25rem;
     }
   }
 }

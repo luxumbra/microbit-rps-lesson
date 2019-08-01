@@ -37,6 +37,7 @@ module.exports = {
         /**
          *  Content Plugins
          */
+        `gatsby-transformer-json`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -51,6 +52,13 @@ module.exports = {
             options: {
                 path: path.join(__dirname, `src`, `images`),
                 name: `images`,
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: path.join(__dirname, `src`, `data`),
+                name: `data`,
             },
         },
         `gatsby-plugin-sharp`,

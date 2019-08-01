@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { Link, StaticQuery, graphql } from 'gatsby'
 //
 import config from '../../utils/siteConfig'
-import Masthead from './masthead/Masthead'
+import Masthead from './Masthead/Masthead'
 import Navigation from './Navigation'
 
 // Styles
@@ -28,9 +28,9 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
         <>
             <Helmet>
                 <html lang={site.lang} />
-                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous" />
                 <style type="text/css">{`${site.codeinjection_styles}`}</style>
-                <body className={bodyClass} />
+                <body className={`background-gradient ${bodyClass}`} />
             </Helmet>
 
             <div className="viewport">
@@ -74,7 +74,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
 
                 </div>
             </div>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossOrigin="anonymous"></script>
         </>
     )
 }
